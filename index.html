@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College ERP Login</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2> 🎓AITM ERP Login</h2>
+    <form id="loginForm">
+      <label for="role">Select Role</label>
+      <select id="role" required>
+        <option value="">-- Select Role --</option>
+        <option value="admin">Admin</option>
+        <option value="faculty">Faculty</option>
+        <option value="student">Student</option>
+      </select>
+
+      <label for="id">User ID</label>
+      <input type="text" id="id" placeholder="Enter ID" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter Password" required>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard — College ERP</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+  <div class="top-container">
+    <h1>🎓 College ERP — Admin Dashboard</h1>
+    <div id="adminName">Welcome, Admin</div>
+    <div class="top-buttons">
+      <span class="label">Show Passwords:</span>
+      <button id="togglePasswords" class="btn btn-toggle">Hide</button>
+      <button id="logoutBtn" class="btn btn-logout">Logout</button>
+    </div>
+  </div>
+
+  <div class="tables-section">
+
+    <!-- Faculty Table -->
+    <div class="card">
+      <div class="table-header">
+        <h2>Faculty</h2>
+        <div class="table-controls">
+          <input type="text" id="searchFaculty" placeholder="Search faculty..." class="input-box">
+          <button id="addFacultyBtn" class="btn">+ Add Faculty</button>
+          <button class="btn btn-export" id="exportFaculty">Export CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="facultyTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Faculty ID</th>
+              <th>Name</th>
+              <th>Password</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Students Table -->
+    <div class="card">
+      <div class="table-header">
+        <h2>Students</h2>
+        <div class="table-controls students-controls">
+          <div>
+            <label for="searchStudents">Search</label>
+            <input type="text" id="searchStudents" placeholder="Search students..." class="input-box">
+          </div>
+          <div>
+            <label for="studProgram">Program</label>
+            <input type="text" id="studProgram" placeholder="BCA / BBA / B.Tech" class="input-box">
+          </div>
+          <div>
+            <label for="studSemester">Semester</label>
+            <input type="number" id="studSemester" min="1" max="10" placeholder="1 - 10" class="input-box">
+          </div>
+          <div>
+            <label for="studClass">Class</label>
+            <input type="text" id="studClass" placeholder="BCA-A" class="input-box">
+          </div>
+          <button id="addStudentBtn" class="btn">+ Add</button>
+          <button class="btn btn-export" id="exportStudents">Export CSV</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table id="studentsTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Roll</th>
+              <th>Name</th>
+              <th>Program</th>
+              <th>Semester</th>
+              <th>Class</th>
+              <th>Password</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Attendance Management -->
+    <div class="card">
+      <h2>Attendance Management</h2>
+      <p>You can save attendance records for each student.</p>
+      <h3>Update Attendance</h3>
+      <button id="saveAttendanceBtn" class="btn">Save Attendance</button>
+      <div class="table-wrap">
+        <table id="attendanceTable">
+          <thead>
+            <tr>
+              <th>Roll No</th>
+              <th>Name</th>
+              <th>Total Classes</th>
+              <th>Present Classes</th>
+              <th>Save</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+  <section class="timetable-container">
+
+  <h2>📅 Add Timetable Entry</h2>
+
+  <form id="timetable-form">
+
+    <label>Faculty:</label>
+    <select id="facultySelect" required>
+      <option value="">Select Faculty</option>
+    </select>
+<label>Faculty id:</label>
+    <select id="facultySelect" required>
+      <option value="">Select Faculty id</option>
+    </select>
+    <label>Subject:</label>
+    <select id="subjectSelect" required></select><br>
+
+    <label>Day:</label>
+    <select id="daySelect" required>
+      <option>Monday</option>
+      <option>Tuesday</option>
+      <option>Wednesday</option>
+      <option>Thursday</option>
+      <option>Friday</option>
+      <option>Saturday</option>
+    </select>
+
+    <label>Time Slot:</label>
+    <select id="timeSlot" required>
+      <option>9:00 to 9:50</option>
+      <option>9:50 to 10:40</option>
+      <option>10:50 to 11:40</option>
+      <option>11:40 to 12:30</option>
+      <option>1:20 to 2:10</option>
+      <option>2:10 to 3:00</option>
+      <option>3:10 to 4:00</option>
+      <option>4:00 to 4:50</option>
+    </select>
+
+    <label>Class:</label>
+<select id="classSelect" required>
+  <option value="">Select Class</option>
+  <option value="2A">2A</option>
+  <option value="2B">2B</option>
+  <option value="3A">3A</option>
+</select>
+<br>
+    <label>Class Room:</label>
+    <input type="text" id="classRoom" required>
+
+    <button type="submit">Add Lecture</button>
+  </form>
+
+  <h2>📘 Weekly Timetable</h2>
+
+  <table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>9:00–9:50</th>
+        <th>9:50–10:40</th>
+        <th>10:50–11:40</th>
+        <th>11:40–12:30</th>
+        <th>1:20–2:10</th>
+        <th>2:10–3:00</th>
+        <th>3:10–4:00</th>
+        <th>4:00–4:50</th>
+      </tr>
+    </thead>
+
+    <tbody id="timetable-body">
+      <!-- JS inserts rows -->
+    </tbody>
+  </table>
+
+</section>
+
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+
+</html>

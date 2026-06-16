@@ -1,0 +1,140 @@
+/* General Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Faculty Name Header */
+#facultyName {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #222;
+}
+
+/* Card Styling */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Card Headings */
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #060505;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #df9295;
+    color: #fff;
+    font-weight: 600;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #e2f0ff;
+    cursor: pointer;
+}
+
+/* Table Borders */
+table th:first-child {
+    border-top-left-radius: 8px;
+}
+table th:last-child {
+    border-top-right-radius: 8px;
+}
+table td:first-child {
+    border-left: 1px solid #ddd;
+}
+table td:last-child {
+    border-right: 1px solid #ddd;
+}
+
+/* Select Inputs */
+select {
+    padding: 6px 10px;
+    margin: 5px 10px 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Buttons */
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Save Button */
+button.save {
+    background-color: #28a745;
+    color: #fff;
+}
+
+button.save:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Delete Button */
+button.delete {
+    background-color: #b70108da;
+    color: #fff;
+    margin-left: 10px;
+}
+
+button.delete:hover {
+    background-color: #b70108da;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    table th, table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+    select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

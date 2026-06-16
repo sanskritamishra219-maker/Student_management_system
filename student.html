@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="student.css">
+</head>
+<body>
+
+<!-- Profile Card -->
+<div class="card profile-card">
+  <div class="profile-right">
+    <h2 id="studentName"></h2>
+    <p><strong>Roll No:</strong> <span id="rollNo"></span></p>
+    <p><strong>Course:</strong> <span id="program"></span></p>
+    <p><strong>Semester:</strong> <span id="semester"></span></p>
+    <p><strong>Class:</strong> <span id="classGroup"></span></p>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat-card">
+    <h4>Overall Attendance</h4>
+    <p id="overallAttendance">0%</p>
+  </div>
+
+  <div class="stat-card">
+    <h4>Average Marks</h4>
+    <p id="averageMarks">0%</p>
+  </div>
+
+  <div class="stat-card">
+    <h4>Total Subjects</h4>
+    <p id="totalSubjects">0</p>
+  </div>
+</div>
+
+<!-- Timetable Card -->
+<div class="card">
+  <h3>Your Timetable</h3>
+
+  <table class="timetable-grid" id="studentTimetable">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>9:00-9:50</th>
+        <th>9:50-10:40</th>
+        <th>10:50-11:40</th>
+        <th>11:40-12:30</th>
+        <th>1:20-2:10</th>
+        <th>2:10-3:00</th>
+        <th>3:10-4:00</th>
+        <th>4:00-4:50</th>
+      </tr>
+    </thead>
+    <tbody id="timetableBody"></tbody>
+  </table>
+</div>
+
+
+<!-- Attendance Card -->
+<div class="card">
+  <h3>Attendance Summary</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Total Classes</th>
+        <th>Attended</th>
+        <th>Percentage</th>
+      </tr>
+    </thead>
+    <tbody id="attendanceSummary"></tbody>
+  </table>
+</div>
+
+<!-- Marks Card -->
+<div class="card">
+  <h3>Marks</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Marks</th>
+        <th>Max Marks</th>
+         <th>Percentage</th>
+      </tr>
+    </thead>
+    <tbody id="marksBody"></tbody>
+  </table>
+</div>
+
+<script src="student.js"></script>
+</body>
+</html>

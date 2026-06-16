@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Faculty Dashboard</title>
+  <link rel="stylesheet" href="faculty.css">
+</head>
+<body>
+
+<h2 id="facultyName"></h2>
+
+<div class="card">
+  <h3>Your Timetable</h3>
+  <table border="1" width="100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Class</th>
+      <th>Subject</th>
+      <th>Room</th>
+    </tr>
+  </thead>
+  <tbody id="timetableBody"></tbody>
+</table>
+
+</div>
+<div class="card">
+  <h3>Mark Attendance</h3>
+
+  <label>Class:</label>
+  <select id="classSelect">
+    <option value="2A">2A</option>
+  </select>
+
+  <label>Subject:</label>
+  <select id="subjectSelect"></select>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Roll</th>
+        <th>Name</th>
+        <th>Present</th>
+      </tr>
+    </thead>
+    <tbody id="attendanceBody"></tbody>
+  </table>
+
+  <button onclick="saveAttendance()">Save Attendance</button>
+</div>
+
+<div class="card">
+  <h3>Enter Marks</h3>
+
+  <label>Class:</label>
+  <select id="marksClass">
+    <option value="2A">2A</option>
+  </select>
+
+  <label>Subject:</label>
+  <select id="marksSubject"></select>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Roll</th>
+        <th>Name</th>
+        <th>Marks</th>
+      </tr>
+    </thead>
+    <tbody id="marksBody"></tbody>
+  </table>
+
+  <button class="save">Save Marks</button>
+<button class="delete">Delete Subject Marks</button>
+
+
+</div>
+
+<script src="faculty.js"></script>
+</body>
+</html>
